@@ -26,13 +26,13 @@ docker login -u <username>
 PUSH :
 ======
 
-docker push  utube/pythonmicroservice:1 
+docker push  utube/pythonmicroservice:1 .
 
 
-docker push  utube/pythonmicroservice:2 
+docker push  utube/pythonmicroservice:2 .
 
 
-docker push  utube/pythonmicroservice:2 
+docker push  utube/pythonmicroservice:2 .
 
 
 RUN:
