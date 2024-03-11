@@ -1,0 +1,50 @@
+TUTORIAL     ALB/ECS/FARGATE  ;; code based on python 
+=============================================================
+
+utube: https://www.youtube.com/watch?v=o7s-eigrMAI&t=640s
+sourcegit: https://github.com/beabetterdevv/FargateECSAppWithLoadbalancer.git
+
+
+PYTHON CODE in three directories  app1 , app2 ,app3 . In each directory you will find the Dockerfile
+
+BUILD CODE
+=========
+                                                    PORT
+docker build -t  utube/pythonmicroservice:1 .      # 8081
+
+docker build -t  utube/pythonmicroservice:2        # 8082
+
+docker build -t  utube/pythonmicroservice:3        # 8083
+
+
+LOGIN:
+=======
+
+docker login -u <username>
+
+
+PUSH :
+======
+
+docker push  utube/pythonmicroservice:1 
+
+
+docker push  utube/pythonmicroservice:2 
+
+
+docker push  utube/pythonmicroservice:2 
+
+
+RUN:
+=====
+
+docker run -it --name app1 -p 8081:8081 --rm utube/pythonmicroservice:1
+
+docker run -it --name app2 -p 8082:8082 --rm utube/pythonmicroservice:2
+
+docker run -it --name app3 -p 8083:8083 --rm utube/pythonmicroservice:3
+
+
+
+
+
